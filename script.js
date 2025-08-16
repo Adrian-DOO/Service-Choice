@@ -5,8 +5,8 @@ const QUESTIONS = [
   { id: "Q3", text: "우리 매장만의 멤버십 서비스 도입 의사가 있나요?", options: ["있음","없음"] },
   { id: "Q4", text: "한 달 기준, 재방문 고객의 구매 비중은 어느 정도인가요?", options: ["30% 미만","30% 이상"] },
   { id: "Q5", text: "고객 데이터를 수집하고 계신가요?", options: ["데이터 없음","POS 연동 데이터가 있음","자체관리(엑셀, 구글시트 등) 중임"] },
-  { id: "Q6", text: "카카오톡, SMS 등 메시지를 활용하고 계신가요?", options: ["전혀 사용하지 않음","비정기적으로 사용하고 있음","정기적으로 사용하고 있음","고객 세그먼트에 따라 개인화 메시지를 사용하고 있음"] },
-  { id: "Q7", text: "정기적인 CRM 이벤트 메시지, 직접 운영 가능하신가요?", options: ["직접 운영 가능","직접 운영 어려움"] },
+  { id: "Q6", text: "카카오톡, SMS 등 메시지를 활용하고 계신가요?", options: ["전혀 사용하지 않음","비정기적인 발송","정기적인 발송","고객 맞춤형 메시지 발송"] },
+  { id: "Q7", text: "정기적인 CRM 이벤트 기획, 운영, 메시지 발송, 직접 운영 가능하신가요?", options: ["직접 운영 가능","직접 운영 어려움"] },
 ];
 
 // State management
@@ -247,9 +247,9 @@ function renderResult(answers){
     <div class="result-card">
       <h2 class="result-headline">추천 결과</h2>
       <p class="muted">${storeType}</p>
-      ${block("🟢 필수 (Core)", recs.core, "green")}
-      ${block("🟡 보조 (Optional)", recs.optional, "amber")}
-      ${block("🔵 향후 고려 (Future)", recs.future, "blue")}
+      ${block("필수", recs.core, "green")}
+      ${block("보조", recs.optional, "amber")}
+      ${block("향후 고려", recs.future, "blue")}
       <hr/>
       <div class="insight-wrap">
         <div class="insight-title">인사이트 태그</div>
