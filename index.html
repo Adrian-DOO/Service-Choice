@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매장 CRM 진단 설문</title>
+    <meta name="description" content="AI 기반 매장 CRM 진단 설문으로 맞춤형 서비스를 추천받으세요. 7가지 질문으로 간편하게 진단하고 최적의 CRM 솔루션을 찾아보세요.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="survey-container">
+        <!-- Landing Screen -->
+        <div id="landing-screen">
+            <div class="landing-container">
+                <div class="logo" data-testid="logo-landing">
+                    <img src="logo.png" alt="새시선" />
+                </div>
+                <div class="landing-title">내게 맞는 새시선 서비스 찾기</div>
+                <div class="landing-description">
+                    어떤 서비스를 신청해야 할지 모르겠다면? 물음에 답해보세요!
+                </div>
+                
+                <div class="service-preview">
+                    <img src="survey-preview.png" alt="서비스 미리보기" class="preview-image" />
+                </div>
+
+                <button class="start-button" id="start-btn" data-testid="button-start">
+                    <span>▶</span> 시작하기
+                </button>
+                
+            </div>
+        </div>
+
+        <!-- Survey Screen -->
+        <div id="survey-screen" class="hidden">
+            <div class="survey-header">
+                <button class="back-button" id="back-btn" disabled data-testid="button-back">
+                    ←
+                </button>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill" data-testid="progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text" data-testid="text-progress">1/7</span>
+                </div>
+            </div>
+
+            <div class="survey-content">
+                <div class="logo" data-testid="logo-survey">
+                    <img src="logo.png" alt="새시선" />
+                </div>
+                <div class="question-number" id="question-number" data-testid="text-question-number">Q1.</div>
+                <div class="question-text" id="question-text" data-testid="text-question">어떤 분야의 매장을 운영하고 계신가요?</div>
+                
+                <div class="answers-container" id="answers-container" data-testid="container-answers">
+                    <!-- Answer buttons will be populated by JavaScript -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="hidden">
+            <div class="result-container">
+                <div class="logo" data-testid="logo-result">
+                    <img src="logo.png" alt="새시선" />
+                </div>
+                <div id="result-root" data-testid="result-root">
+                    <!-- Multi-recommendation results will be populated by JavaScript -->
+                </div>
+                <button class="restart-button" id="restart-btn" data-testid="button-restart">다시 진단하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
